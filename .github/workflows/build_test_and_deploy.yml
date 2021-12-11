@@ -48,9 +48,8 @@ jobs:
         run: dotnet test
 
       - name: Test frontend
+        working-directory: ${{env.DOTNET_ROOT}}/ClientApp
         run: npm run test
-        with:
-          path: ${{env.DOTNET_ROOT}}/ClientApp
 
   # deploy:
   #   runs-on: windows-latest
