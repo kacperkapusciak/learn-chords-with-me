@@ -10,29 +10,31 @@ import blackKeysSounds from '../sounds/grand_piano_black_only.mp3';
 const Container = styled.div`
   display: flex;
   position: relative;
+  left: -25%;
+  height: 18vw;
+  margin-bottom: 20px;
 `;
-
 const WhiteKey = styled.div`
-  width: 120px;
-  height: 270px;
+  width: 7vw;
+  height: 17vw;
   border: 1px solid #ccc;
   border-radius: 2px 2px 5px 5px;
   background-color: white;
   box-shadow: 0px 9px 0px 0px rgba(0, 0, 0, 0.5);
 `;
 const BlackKey = styled.div`
-  width: 90px;
-  height: 150px;
+  width: 5vw;
+  height: 9vw;
   border-radius: 2px 2px 5px 5px;
   background-color: black;
   box-shadow: 0px 9px 0px 0px rgba(0, 0, 0, 0.8);
-  margin-right: 33px;
+  margin-right: 2vw;
 `;
 const PhantomBlackKey = styled.div`
-  width: 90px;
-  height: 150px;
+  width: 5vw;
+  height: 9vw;
   opacity: 0;
-  margin-right: 30px;
+  margin-right: 2vw;
 `;
 const WhiteKeysWrapper = styled.div`
   display: flex;
@@ -41,7 +43,7 @@ const WhiteKeysWrapper = styled.div`
 const BlackKeysWrapper = styled.div`
   display: flex;
   position: absolute;
-  left: 75px;
+  left: 4.5vw;
 `;
 
 function Piano() {

@@ -1,8 +1,11 @@
 import React from 'react';
-import Piano from '../components/Piano';
+import { useNavigate } from 'react-router-dom';
+import Button from '../components/Button';
 
 function Home() {
-  return <Piano />;
+  const navigate = useNavigate();
+
+  return <Button onClick={() => navigate('/learn')}>Learn</Button>;
 }
 
 export default Home;
