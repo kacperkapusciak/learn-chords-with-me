@@ -1,7 +1,8 @@
 import React from 'react';
+import Piano from '../components/Piano';
 
 function Home() {
-  return <div>Hello, world!</div>;
+  return <Piano />;
 }
 
 export default Home;
