@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import useSound from 'use-sound';
 import styled from 'styled-components';
 
@@ -72,18 +72,18 @@ function Piano() {
     <Container>
       <WhiteKeysWrapper>
         {whiteKeys.map((key) => (
-          <WhiteKey onClick={() => playWhiteKey({ id: key })} />
+          <WhiteKey onClick={() => playWhiteKey({ id: key })} key={key} />
         ))}
       </WhiteKeysWrapper>
       <BlackKeysWrapper>
         {blackKeys.map((key) =>
           key === 'd#' ? (
-            <>
+            <Fragment key={key}>
               <BlackKey onClick={() => playBlackKey({ id: key })} />
               <PhantomBlackKey />
-            </>
+            </Fragment>
           ) : (
-            <BlackKey onClick={() => playBlackKey({ id: key })} />
+            <BlackKey onClick={() => playBlackKey({ id: key })} key={key} />
           )
         )}
       </BlackKeysWrapper>
